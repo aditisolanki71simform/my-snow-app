@@ -1,0 +1,15 @@
+export const images = {
+  // header: require('../assets/images'),
+  // avatar_img: require('../assets/images'),
+  activities1: require('../assets/images/right_sidebar_images/3D05.svg'),
+  activities2: require('../assets/images/right_sidebar_images/3D08.svg'),
+  activities3: require('../assets/images/right_sidebar_images/Female05.svg'),
+  activities4: require('../assets/images/right_sidebar_images/Male07.svg'),
+  activities5: require('../assets/images/right_sidebar_images/Male11.svg'),
+  contacts1: require('../assets/images/right_sidebar_images/Female15.svg'),
+  contacts2: require('../assets/images/right_sidebar_images/Male08.svg'),
+  contacts3: require('../assets/images/right_sidebar_images/Male06.svg'),
+  contacts4: require('../assets/images/right_sidebar_images/Female08.svg'),
+  contacts5: require('../assets/images/right_sidebar_images/Female09.svg'),
+  contacts6: require('../assets/images/right_sidebar_images/3D03.svg'),
+};

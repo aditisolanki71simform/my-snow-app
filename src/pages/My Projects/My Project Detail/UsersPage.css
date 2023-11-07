@@ -1,0 +1,21 @@
+/* Add this to your CSS file */
+
+.responsive-table {
+  overflow-x: auto;
+}
+
+.ant-table {
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.ant-table table {
+  table-layout: auto;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
