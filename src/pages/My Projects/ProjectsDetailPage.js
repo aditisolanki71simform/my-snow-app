@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Menu } from 'antd';
 import UsersPage from './My Project Detail/UsersPage';
-import BaseSnowAppContainer from '../../components/BaseSnowAppContainer/BaseSnowAppContainer';
 
 const ProjectsDetailPage = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('users');
@@ -11,7 +10,7 @@ const ProjectsDetailPage = () => {
   };
 
   return (
-    <BaseSnowAppContainer>
+    <>
       <div className="projects">
         <h3>My Projects</h3>
         <Menu
@@ -29,16 +28,19 @@ const ProjectsDetailPage = () => {
         </Menu>
         <div>
           {selectedMenuItem === 'overview' && <div>Overview</div>}
-          {selectedMenuItem === 'tagets' && <div>Targets</div>}
+          {selectedMenuItem === 'targets' && <div>Targets</div>}
           {selectedMenuItem === 'budget' && <div>Budget</div>}
           {selectedMenuItem === 'users' && (
             <div>
               <UsersPage />
             </div>
           )}
+          {selectedMenuItem === 'files' && <div>Files</div>}
+          {selectedMenuItem === 'activity' && <div>Activities</div>}
+          {selectedMenuItem === 'settings' && <div>Settings</div>}
         </div>
       </div>
-    </BaseSnowAppContainer>
+    </>
   );
 };
 

@@ -1,55 +1,51 @@
-import Notification1 from '../../src/components/Icon/RightSidebar/Notification1';
-import Notification2 from '../../src/components/Icon/RightSidebar/Notification2';
-import Notification4 from '../../src/components/Icon/RightSidebar/Notification4';
-
-import Activities1 from '../../src/components/Icon/RightSidebar/Activities1';
-import Activities2 from '../../src/components/Icon/RightSidebar/Activities2';
-import Activities3 from '../../src/components/Icon/RightSidebar/Activities3';
-import Activities4 from '../../src/components/Icon/RightSidebar/Activities4';
-import Activities5 from '../../src/components/Icon/RightSidebar/Activities5';
-
-import Contacts1 from '../../src/components/Icon/RightSidebar/Contacts1';
-import Contacts2 from '../../src/components/Icon/RightSidebar/Contacts2';
-import Contacts3 from '../../src/components/Icon/RightSidebar/Contacts3';
-import Contacts4 from '../../src/components/Icon/RightSidebar/Contacts4';
-import Contacts5 from '../../src/components/Icon/RightSidebar/Contacts5';
-import Contacts6 from '../../src/components/Icon/RightSidebar/Contacts6';
-
 import Avatars from '../../src/components/Avatar/Avatars';
 
-import CorporateIcon from '../../src/components/Icon/Sidebar/CorporateIcon';
-import ListChecksIcon from '../../src/components/Icon/Projects/ListChecksIcon';
-import BatteryChargingIcon from '../../src/components/Icon/Projects/BatteryChargingICon';
-import ProjectsIcon from '../../src/components/Icon/Sidebar/ProjectsIcon';
+import {
+  Notification1,
+  Notification2,
+  Notification4,
+  Activities1,
+  Activities2,
+  Activities3,
+  Activities4,
+  Activities5,
+  Contacts1,
+  Contacts2,
+  Contacts3,
+  Contacts4,
+  Contacts5,
+  CorporateIcon,
+  ListChecksIcon,
+  BatteryChargingIcon,
+  ProjectsIcon,
+  CurrencyCircleIcon,
+} from '../config/Icons';
 
-import CurrencyCircleIcon from '../../src/components/Icon/My Projects/CurrencyCircleIcon';
-
-import MyProjectsCard1 from '../../src/components/Icon/My Projects/MyProjectsCard1.svg';
-import MyProjectsCard2 from '../../src/components/Icon/My Projects/MyProjectsCard2.png';
-import MyProjectsCard3 from '../../src/components/Icon/My Projects/MyProjectsCard3.svg';
-import MyProjectsCard4 from '../../src/components/Icon/My Projects/MyProjectsCard4.svg';
-import MyProjectsCard5 from '../../src/components/Icon/My Projects/MyProjectsCard5.svg';
-import MyProjectsCard6 from '../../src/components/Icon/My Projects/MyProjectsCard6.svg';
-import MyProjectsCard7 from '../../src/components/Icon/My Projects/MyProjectsCard7.svg';
-import MyProjectsCard8 from '../../src/components/Icon/My Projects/MyProjectsCard8.svg';
-import MyProjectsCard9 from '../../src/components/Icon/My Projects/MyProjectsCard9.svg';
-import MyProjectsCard10 from '../../src/components/Icon/My Projects/MyProjectsCard10.svg';
-import MyProjectsCard11 from '../../src/components/Icon/My Projects/MyProjectsCard11.svg';
-import MyProjectsCard12 from '../../src/components/Icon/My Projects/MyProjectsCard12.svg';
-
-import MyProjectAvatar1 from '../../src/components/Icon/My Projects/MyProjectAvtar1.svg';
-import MyProjectAvatar2 from '../../src/components/Icon/My Projects/MyProjectAvtar2.svg';
-import MyProjectAvatar3 from '../../src/components/Icon/My Projects/MyProjectAvtar3.svg';
-import MyProjectAvatar4 from '../../src/components/Icon/My Projects/MyProjectAvtar4.svg';
-import MyProjectAvatar5 from '../../src/components/Icon/My Projects/MyProjectAvtar5.svg';
-import MyProjectAvatar6 from '../../src/components/Icon/My Projects/MyProjectAvtar6.svg';
-import MyProjectAvatar8 from '../../src/components/Icon/My Projects/MyProjectAvtar8.svg';
-import MyProjectAvatar9 from '../../src/components/Icon/My Projects/MyProjectAvtar9.svg';
-import MyProjectAvatar10 from '../../src/components/Icon/My Projects/MyProjectAvtar10.svg';
-import MyProjectAvatar11 from '../../src/components/Icon/My Projects/MyProjectAvtar11.svg';
-import MyProjectAvatar12 from '../../src/components/Icon/My Projects/MyProjectAvtar12.svg';
-
-// import activities1 from '../../../assets/images/right_sidebar_images/3D05.svg';
+import {
+  MyProjectsCard1,
+  MyProjectsCard2,
+  MyProjectsCard3,
+  MyProjectsCard4,
+  MyProjectsCard5,
+  MyProjectsCard6,
+  MyProjectsCard7,
+  MyProjectsCard8,
+  MyProjectsCard9,
+  MyProjectsCard10,
+  MyProjectsCard11,
+  MyProjectsCard12,
+  MyProjectAvatar1,
+  MyProjectAvatar2,
+  MyProjectAvatar3,
+  MyProjectAvatar4,
+  MyProjectAvatar5,
+  MyProjectAvatar6,
+  MyProjectAvatar8,
+  MyProjectAvatar9,
+  MyProjectAvatar10,
+  MyProjectAvatar11,
+  MyProjectAvatar12,
+} from '../config/images';
 
 export const notificationsData = [
   {
@@ -387,18 +383,24 @@ export const MyProjectsCards = [
   },
 ];
 
+const contactIcons = [Contacts1, Contacts2, Contacts3, Contacts4, Contacts5];
 export const usersColumns = [
   {
     title: 'User',
     dataIndex: 'user',
-    render: (text) => (
-      <div style={{ display: 'flex', alignContent: 'center' }}>
-        <div style={{ paddingTop: '10px' }}>
-          <Avatars img={<Activities1 />} />
+    render: (text, index) => {
+      const validIndex = index.key % contactIcons.length;
+      const ContactIcon = contactIcons[validIndex];
+
+      return (
+        <div style={{ display: 'flex', alignContent: 'center' }}>
+          <div style={{ paddingTop: '10px' }}>
+            <Avatars img={<ContactIcon />} />
+          </div>
+          <div style={{ padding: '14px' }}>{text}</div>
         </div>
-        <div style={{ padding: '14px' }}>{text}</div>
-      </div>
-    ),
+      );
+    },
   },
   {
     title: 'Email',
@@ -415,7 +417,7 @@ export const usersColumns = [
     dataIndex: 'action',
   },
 ];
-// const data = [];
+
 export const usersData = [
   {
     key: '1',

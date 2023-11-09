@@ -1,11 +1,5 @@
-import BaseSnowAppContainer from "../../components/BaseSnowAppContainer/BaseSnowAppContainer";
-
 const BlogPage = () => {
-  return (
-    <BaseSnowAppContainer>
-      Blog page 
-    </BaseSnowAppContainer>
-  )
-}
+  return <>Blog page</>;
+};
 
 export default BlogPage;

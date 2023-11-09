@@ -17,7 +17,7 @@ const MyProjectName = () => {
             gutter="0"
             className="name_card"
           >
-            <a href="/Project-detail">
+            <a href="/project-detail">
               <ProjectNameCard
                 projectName={project.projectName}
                 cardImg={project.cardImg}

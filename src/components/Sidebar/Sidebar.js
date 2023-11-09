@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import { ReactComponent as LogoImg } from '../../assets/images/Logo.svg';
-import Link from 'antd/es/typography/Link';
+import { NavLink } from 'react-router-dom';
 import DefaultIcon from '../Icon/Sidebar/DefaultIcon';
 import ECommerceIcon from '../Icon/Sidebar/ECommerceIcon';
 import ProjectsIcon from '../Icon/Sidebar/ProjectsIcon';
@@ -12,6 +13,12 @@ import SocialIcon from '../Icon/Sidebar/SocialIcon';
 import './Sidebar.scss';
 
 const Sidebar = () => {
+  const [activeItem, setActiveItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+
   return (
     <div className="sidebar_container">
       <div>
@@ -20,65 +27,127 @@ const Sidebar = () => {
         </div>
         <div className="sidebar_items">
           <ul>
-            <li className="first-child">
-              <Link className="sidebar_item" href="/dashboard">
+            <li
+              className={` ${activeItem === 'dashboard' ? 'first-child' : ''}`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/dashboard"
+                onClick={() => handleItemClick('dashboard')}
+              >
                 <DefaultIcon />
                 <span className="sidebar_item_text">Default</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/project-dashboard">
+            <li
+              className={` ${
+                activeItem === 'project-dashboard' ? 'first-child' : ''
+              }`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/project-dashboard"
+                onClick={() => handleItemClick('project-dashboard')}
+              >
                 <DefaultIcon />
                 <span className="sidebar_item_text">Project Dash</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/e-commerce">
+            <li
+              className={` ${activeItem === 'e-commerce' ? 'first-child' : ''}`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/e-commerce"
+                onClick={() => handleItemClick('e-commerce')}
+              >
                 <ECommerceIcon />
                 <span className="sidebar_item_text">eCommerce</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/my-projects">
+            <li
+              className={` ${
+                activeItem === 'my-projects' ? 'first-child' : ''
+              }`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/my-projects"
+                onClick={() => handleItemClick('my-projects')}
+              >
                 <ProjectsIcon />
                 <span className="sidebar_item_text">Projects</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/online-courses">
+            <li
+              className={` ${
+                activeItem === 'online-courses' ? 'first-child' : ''
+              }`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/online-courses"
+                onClick={() => handleItemClick('online-courses')}
+              >
                 <OnlineCoursesIcon />
                 <span className="sidebar_item_text">Online Courses</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/user-profile">
+            <li
+              className={` ${
+                activeItem === 'user-profile' ? 'first-child' : ''
+              }`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/user-profile"
+                onClick={() => handleItemClick('user-profile')}
+              >
                 <UserProfileIcon />
                 <span className="sidebar_item_text">User Profile</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/account">
+            <li className={` ${activeItem === 'account' ? 'first-child' : ''}`}>
+              <NavLink
+                className="sidebar_item"
+                to="/account"
+                onClick={() => handleItemClick('account')}
+              >
                 <AccountIcon />
                 <span className="sidebar_item_text">Account</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/corporate">
+            <li
+              className={` ${activeItem === 'corporate' ? 'first-child' : ''}`}
+            >
+              <NavLink
+                className="sidebar_item"
+                to="/corporate"
+                onClick={() => handleItemClick('corporate')}
+              >
                 <CorporateIcon />
                 <span className="sidebar_item_text">Corporate</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/blog">
+            <li className={` ${activeItem === 'blog' ? 'first-child' : ''}`}>
+              <NavLink
+                className="sidebar_item"
+                to="/blog"
+                onClick={() => handleItemClick('blog')}
+              >
                 <BlogIcon />
                 <span className="sidebar_item_text">Blog</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link className="sidebar_item" href="/social">
+            <li className={` ${activeItem === 'social' ? 'first-child' : ''}`}>
+              <NavLink
+                className="sidebar_item"
+                to="/social"
+                onClick={() => handleItemClick('social')}
+              >
                 <SocialIcon />
                 <span className="sidebar_item_text">Social</span>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

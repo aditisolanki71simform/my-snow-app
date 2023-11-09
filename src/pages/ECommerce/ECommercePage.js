@@ -1,6 +1,4 @@
-import BaseSnowAppContainer from '../../components/BaseSnowAppContainer/BaseSnowAppContainer';
-
 const ECommercePage = () => {
-  return <BaseSnowAppContainer>e commerce page is</BaseSnowAppContainer>;
+  return <>e commerce page is</>;
 };
 export default ECommercePage;

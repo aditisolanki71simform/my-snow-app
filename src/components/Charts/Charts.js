@@ -10,16 +10,23 @@ import BarChart3 from './BarChart3';
 import ScatterChart from './ScatterChart';
 import BarChart4 from './BarChart4';
 import LineChart2 from './LineChart2';
+import LineChartUpdated from './LineChartUpdated';
+import LineChartExample from './LineChartExample';
+import BarChartExample from './BarChartExample';
+import BarChartExample2 from './BarChartExample2';
+import DoughnutChartExample from './DoughnutChartExample';
 
 const Charts = () => {
   return (
     <>
       <Row>
         <Col span={11} className="chart_left">
-          <BarChart />
+          {/* <BarChart /> */}
+          <BarChartExample />
         </Col>
         <Col span={11} className="chart_right">
-          <LineChart />
+          {/* <LineChart /> */}
+          <LineChartExample />
         </Col>
       </Row>
       <Row>
@@ -27,13 +34,15 @@ const Charts = () => {
           <TrendChart />
         </Col>
         <Col span={11} className="chart_right">
-          <BarChart2 />
+          {/* <BarChart2 /> */}
+          <BarChartExample2 />
         </Col>
       </Row>
 
       <Row>
         <Col span={11} className="chart_left">
-          <DoughnutChart />
+          {/* <DoughnutChart /> */}
+          <DoughnutChartExample />
         </Col>
         <Col span={11} className="chart_right">
           <DoughnutChart2 />

@@ -50,6 +50,7 @@ const UsersPage = () => {
       },
     ],
   };
+  const [selectionType, setSelectionType] = useState('checkbox');
   return (
     <div style={{ padding: '20px' }}>
       <div
@@ -57,7 +58,7 @@ const UsersPage = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: 'lightgray',
+          backgroundColor: '#d3d3d3',
           marginBottom: '10px',
         }}
       >
@@ -72,9 +73,18 @@ const UsersPage = () => {
       </div>
       <div className="responsive-table">
         <Table
-          rowSelection={rowSelection}
+          rowSelection={{
+            type: selectionType,
+            ...rowSelection,
+          }}
           columns={usersColumns}
           dataSource={usersData}
+          rowClassName={(record, index) => {
+            if (selectedRowKeys.includes(record.key)) {
+              return 'selected-row';
+            }
+            return '';
+          }}
         />
       </div>
     </div>

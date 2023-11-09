@@ -1,11 +1,5 @@
-import BaseSnowAppContainer from "../../components/BaseSnowAppContainer/BaseSnowAppContainer";
-
 const AccountPage = () => {
-  return (
-    <BaseSnowAppContainer>
-      Account page 
-    </BaseSnowAppContainer>
-  )
-}
+  return <>Account page</>;
+};
 
 export default AccountPage;

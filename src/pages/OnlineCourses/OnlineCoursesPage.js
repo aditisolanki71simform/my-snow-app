@@ -1,11 +1,5 @@
-import BaseSnowAppContainer from "../../components/BaseSnowAppContainer/BaseSnowAppContainer";
-
 const OnlineCoursesPage = () => {
-  return (
-    <BaseSnowAppContainer>
-      Online courses page 
-    </BaseSnowAppContainer>
-  )
-}
+  return <>Online courses page</>;
+};
 
 export default OnlineCoursesPage;

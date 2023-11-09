@@ -19,3 +19,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.ant-table .ant-table-row .ant-table-row-selected {
+  background-color: pink;
+  color: white; /* You can set the text color for better visibility */
+}
