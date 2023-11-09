@@ -8,11 +8,12 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+
         <Route exact path="/signup" element={<SignupPage />} />
         <Route exact path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/*" element={<Layout />} />
       </Routes>
-      <Layout />
     </Router>
   );
 };
