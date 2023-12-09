@@ -21,7 +21,7 @@ const AuthHeader = () => {
       <Row className="auth_header_container">
         <Col xs={7} md={8} xl={2}>
           <div style={{ textAlign: 'left' }}>
-            <LogoImg />
+            <LogoImg data-testid="logo" />
           </div>
         </Col>
         <Col xs={20} md={8} xl={10} className="custom_menu">

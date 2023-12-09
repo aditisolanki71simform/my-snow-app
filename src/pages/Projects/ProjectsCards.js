@@ -5,7 +5,11 @@ import './ProjectsCards.scss';
 
 const ProjectsCards = () => {
   return (
-    <Row gutter={[16, 16]} className="card_container">
+    <Row
+      data-testid="projects-cards"
+      gutter={[16, 16]}
+      className="card_container"
+    >
       {projectDashboardData.map((project, index) => (
         <Col
           key={index}

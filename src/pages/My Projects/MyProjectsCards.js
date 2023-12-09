@@ -29,9 +29,11 @@ const generateProjectCard = (project) => {
 
 const MyProjectsCards = () => {
   return (
-    <Row className="card_container">
-      {myProjectData.map((project) => generateProjectCard(project))}
-    </Row>
+    <div data-testid="my-projects-cards">
+      <Row className="card_container">
+        {myProjectData.map((project) => generateProjectCard(project))}
+      </Row>
+    </div>
   );
 };
 

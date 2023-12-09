@@ -1,6 +1,7 @@
 function ArrowIcon() {
   return (
     <svg
+      data-testid="arrow-icon"
       width="16"
       height="16"
       viewBox="0 0 16 16"

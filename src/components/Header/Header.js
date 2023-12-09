@@ -12,11 +12,12 @@ import './Header.scss';
 const Header = (props) => {
   return (
     <HeaderStyles>
-      <div className="header_container">
+      <div data-testid="toggle-sidebar-button" className="header_container">
         <div className="header_left">
-          <BlogIcon />
-          <StarIcon />
+          <BlogIcon data-testid="blog-icon" />
+          <StarIcon data-testid="star-icon" />
           <BreadCrumb
+            data-testid="breadcrumb"
             items={[
               {
                 title: 'dashboards',
@@ -29,14 +30,14 @@ const Header = (props) => {
         </div>
         <div className="header_right">
           <div>
-            <SearchBar />
+            <SearchBar data-testid="search-bar" />
           </div>
-          <SunIcon />
-          <ClockCounterClockwiseIcon />
+          <SunIcon data-testid="sun-icon" />
+          <ClockCounterClockwiseIcon data-testid="clock-icon" />
           <a href="/notification">
-            <BellIcon />
+            <BellIcon data-testid="bell-icon" />
           </a>
-          <BlogIcon />
+          <BlogIcon data-testid="blog-icon" />
         </div>
       </div>
     </HeaderStyles>

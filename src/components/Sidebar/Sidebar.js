@@ -20,7 +20,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar_container">
+    <div className="sidebar_container" data-testid="sidebar">
       <div>
         <div className="snow_logo">
           <LogoImg />

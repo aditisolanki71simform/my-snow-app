@@ -4,7 +4,7 @@ import './ProjectStatus.scss';
 
 const ProjectStatus = () => {
   return (
-    <div className="project_status_container">
+    <div className="project_status_container" data-testid="project-status">
       <h3 className="project_status_header">Project status</h3>
       <ProjectStatusLogo />
       <div className="project_content">
